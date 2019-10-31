@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Final_JukeBox_Application.Pages.Settings.updateTrackInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="400">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <Grid HorizontalAlignment="Left" Height="75" Margin="0,0,-0,0" VerticalAlignment="Top" Width="400">
+                    <TextBox x:Name="searchTrack" HorizontalAlignment="Left" Height="23" Margin="185,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" TextChanged="searchTrack_TextChanged" RenderTransformOrigin="1.509,-0.826"/>
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="23" Margin="345,5,0,0" VerticalAlignment="Top" Width="35" />
+                    <TextBlock Text="UPDATE TRACK INFO" Style="{StaticResource Heading2}" Margin="0,0,239,27" />
+                    <TextBlock Text="Update track meta data here..." Margin="0,21,0,31" TextWrapping="Wrap" />
+                </Grid>
+                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="183" Margin="0,0,0,0" VerticalAlignment="Top" Width="399" SelectionChanged="listBox_SelectionChanged"/>
+                <Grid HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="400" Margin="0,13,0,0">
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="60,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+                    <Label x:Name="label" Content="Genre:" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="45"/>
+                    <Label x:Name="label2" Content="Album:" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="45"/>
+                    <Button x:Name="button" Content="Update" HorizontalAlignment="Left" Margin="272,71,0,0" VerticalAlignment="Top" Width="122" Click="button_Click" KeyboardNavigation.IsTabStop="False"/>
+
+                    <Label x:Name="label3" Content="Artist:" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Width="45"/>
+                    <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="60,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="60,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>
+

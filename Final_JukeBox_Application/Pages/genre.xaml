@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Final_JukeBox_Application.Pages.genre"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+                  d:DesignHeight="450" d:DesignWidth="650">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <Grid HorizontalAlignment="Left" Height="75" Margin="-0,0,0,0" VerticalAlignment="Top" Width="100">
+
+                    <TextBlock Text="Search Library by Genre" Style="{StaticResource Heading2}" Margin="0,0,-172,0" />
+                    <TextBlock Text="Find and play tracks by genre here..." Margin="0,30,-118,0"/>
+                    <TextBox x:Name="searchTrack" HorizontalAlignment="Left" Height="23" Margin="436,3,-469,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133" TextChanged="searchTrack_TextChanged" RenderTransformOrigin="1.509,-0.826"/>
+                    <Label x:Name="PlayLabel" Content="" HorizontalAlignment="Left" Margin="0,60,-332,0" VerticalAlignment="Top" Width="432" FontSize="11" Foreground="#FF1BB5CD"/>
+                    <Label x:Name="timerLabel" Content="" HorizontalAlignment="Left" Margin="438,56,-390,0" VerticalAlignment="Top" Width="52" FontSize="11" Foreground="#FF1BB5CD"/>
+
+                    <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="433,30,-359,19" Width="26" Click="button1_Click" IsCancel="True" BorderThickness="1" Background="#FF6CFF34" RenderTransformOrigin="0.5,0.5">
+                        <Button.OpacityMask>
+                            <ImageBrush ImageSource="../Images/playIcon.ico" Stretch="Uniform"/>
+                        </Button.OpacityMask>
+                    </Button>
+                    <Button x:Name="button1_Copy1" Content="" HorizontalAlignment="Left" Margin="461,33,-385,0" VerticalAlignment="Top" Width="24" Click="button1_copy_Click" IsCancel="True" BorderThickness="1" Background="#FF1BB5CD" Height="21" RenderTransformOrigin="1.846,0.442">
+                        <Button.OpacityMask>
+                            <ImageBrush ImageSource="../Images/pauseicon.ico" Stretch="Uniform"/>
+                        </Button.OpacityMask>
+                    </Button>
+                    <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="271" Margin="0,90,-105,-286" VerticalAlignment="Top" Width="205" SelectionChanged="listBox_SelectionChanged"/>
+                    <ListBox x:Name="listBox1" Height="271" Margin="244,90,-524,-286" VerticalAlignment="Top" MouseDoubleClick="listBox1_MouseDoubleClick" SelectionChanged="listBox1_SelectionChanged" />
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="23" Margin="560,3,-495,0" VerticalAlignment="Top" Width="35" Source="../Images/searchFinal.png"/>
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="button1_Copy" Content="" HorizontalAlignment="Left" Margin="487,30,0,0" VerticalAlignment="Top" Width="26" Click="button1_copy_2" IsCancel="True" BorderThickness="1" Background="#FFFF3434" Height="26" RenderTransformOrigin="1.846,0.442">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="../Images/stopicon.png" Stretch="Uniform"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="button1_Copy2" Content="" HorizontalAlignment="Left" Margin="546,33,0,0" VerticalAlignment="Top" Width="23" Click="button1_copy_2_4" IsCancel="True" BorderThickness="1" Background="#FF1BB5CD" Height="21" RenderTransformOrigin="1.846,0.442">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="../Images/next.png" Stretch="Uniform"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="button1_Copy3" Content="" HorizontalAlignment="Left" Margin="518,33,0,0" VerticalAlignment="Top" Width="23" Click="button1_copy_2_3" IsCancel="True" BorderThickness="1" Background="#FF1BB5CD" Height="21" RenderTransformOrigin="1.846,0.442">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="../Images/previous.png" Stretch="Uniform"/>
+            </Button.OpacityMask>
+        </Button>
+
+    </Grid>
+</UserControl>
